@@ -1,0 +1,35 @@
+class Result {
+
+    /*
+     * Complete the 'staircase' function below.
+     *
+     * The function accepts INTEGER n as parameter.
+     */
+
+    public static void staircase(int n) {
+        
+        int space = n - 1;
+        int numhash = 1;
+        
+        String ret = "";
+        
+        for(int i = 0;i < n;i++){
+            
+            ret += (" ".repeat(space)) + ("#".repeat(numhash));
+            
+            if(i != (n - 1)){
+                ret += "\n";
+            }
+            
+            space = space - 1;
+            numhash = numhash + 1;
+            
+            
+        }
+        
+        System.out.println(ret);
+    
+
+    }
+
+}
